@@ -1,0 +1,153 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ffc817"
+    android:paddingLeft = "16dp"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+
+    android:weightSum="1">
+
+    <TextView
+        android:id="@+id/txtMsg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center_horizontal"
+        android:text="위의 버튼을 누르면 메인 액티비티로 돌아갑니다."
+        android:textSize="14dp"
+        android:textColor="#ffad6535"
+        android:visibility="invisible"/>
+
+    <Space
+        android:layout_width="20px"
+        android:layout_height="20px"
+        android:id="@+id/space" />
+
+    <ImageView
+
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="216px"
+        android:layout_height="216px"
+        android:text="seat0"
+        android:id="@+id/imageView1"
+        android:layout_row="11"
+        android:layout_column="2"
+        android:background="@drawable/duck_empty"
+        android:layout_above="@+id/imageView2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="14dp" />
+
+    <Button
+        android:layout_width="415px"
+        android:layout_height="174px"
+        android:id="@+id/btn_sms"
+        android:layout_row="10"
+        android:layout_column="9"
+        android:background="@drawable/sms"
+        android:layout_alignBottom="@+id/menu"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <ImageView
+        android:layout_width="931px"
+        android:layout_height="216px"
+        android:id="@+id/imageView3"
+        android:background="@drawable/line_2"
+        android:layout_marginBottom="15dp"
+        android:layout_above="@+id/imageView4"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <ImageView
+        android:layout_width="931px"
+        android:layout_height="216px"
+        android:id="@+id/imageView4"
+        android:background="@drawable/line_1"
+        android:layout_marginBottom="30dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/imageView3"
+        android:layout_alignEnd="@+id/imageView3" />
+
+    <ImageView
+        android:layout_width="216px"
+        android:layout_height="216px"
+        android:id="@+id/imageView6"
+        android:background="@drawable/empty"
+        android:layout_above="@+id/imageView3"
+        android:layout_alignRight="@+id/imageView3"
+        android:layout_alignEnd="@+id/imageView3"
+        android:layout_marginBottom="13dp" />
+
+    <ImageView
+        android:layout_width="524px"
+        android:layout_height="216px"
+        android:id="@+id/imageView2"
+        android:background="@drawable/line_3"
+        android:layout_alignTop="@+id/imageView6"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+    <ListView android:id="@+id/in"
+        android:layout_width="372dp"
+        android:layout_height="38dp"
+        android:stackFromBottom="true"
+        android:transcriptMode="alwaysScroll"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_above="@+id/btn_sms"
+        android:layout_alignParentTop="true" />
+
+
+    <EditText android:id="@+id/edit_text_out"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.15"
+        android:layout_gravity="bottom"
+        android:layout_alignParentTop="true"
+        android:visibility="invisible"
+        android:layout_centerHorizontal="true" />
+
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="170px"
+        android:layout_height="170px"
+        android:id="@+id/menu"
+        android:onClick="onPopupButtonClick"
+
+        android:layout_gravity="right"
+        android:background="@drawable/button1"
+        android:layout_alignBottom="@+id/button_send"
+        android:layout_toLeftOf="@+id/btn_sms"
+        android:layout_toStartOf="@+id/btn_sms" />
+
+
+    <Button android:id="@+id/button_send"
+        android:layout_width = "646px"
+        android:layout_height="174px"
+
+        android:background ="@drawable/connect"
+        android:layout_row="15"
+        android:layout_column="0"
+        android:visibility="invisible"
+        android:layout_above="@+id/imageView1"
+        android:layout_alignRight="@+id/safe_duck"
+        android:layout_alignEnd="@+id/safe_duck" />
+
+    <Button
+        android:id="@+id/safe_duck"
+        android:layout_width="852px"
+        android:layout_height="174px"
+        android:background ="@drawable/belt"
+        android:onClick="onButton1Clicked"
+        android:visibility="invisible"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/space"
+        android:layout_toEndOf="@+id/space" />
+
+</RelativeLayout>
